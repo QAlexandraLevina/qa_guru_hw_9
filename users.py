@@ -22,8 +22,8 @@ class UserData:
 
     @property
     def date_of_birth(self) -> str:
-        m, y, d = self.birthday
-        return f"{int(d):02d} {m},{y}"
+        month_data, year_data, day_data = self.birthday
+        return f"{int(day_data):02d} {month_data},{year_data}"
 
     @property
     def hobby(self) -> str:
@@ -32,5 +32,5 @@ class UserData:
 
     @property
     def state_n_city(self) -> str:
-        s, c = self.state_city
-        return f"{s} {c}"
+        state_data, city_data = self.state_city
+        return f"{state_data} {city_data}"
