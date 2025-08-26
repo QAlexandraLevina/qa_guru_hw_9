@@ -32,5 +32,5 @@ class UserData:
 
     @property
     def state_n_city(self) -> str:
-        state, city = self.state_city
-        return f"{state} {city}"
+        s, c = self.state_city
+        return f"{s} {c}"
