@@ -20,10 +20,11 @@ def test_filled_form():
         ("Uttar Pradesh", "Lucknow"),
     )
     registration_page = RegistrationPage()
+    registration_page.open_practice_form()
 
     """Заполнение формы"""
     registration_page.registration_user(alexandra)
     registration_page.close_button()
 
     """Проверка заполненной формы"""
-    registration_page.should_registered_user_with(alexandra)
+    registration_page.should_registered_user_practice_form(alexandra)

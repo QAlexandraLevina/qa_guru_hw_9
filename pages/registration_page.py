@@ -28,6 +28,12 @@ class RegistrationPage:
         self.close_button = browser.element("#closeLargeModal")
         self.registered_user_data = browser.all("tbody tr td:nth-child(2)")
 
+    """Открытие страницы с формой"""
+
+    def open_practice_form(self):
+        browser.open("/automation-practice-form")
+        return self
+
     """Заполнение поля Date of Birth"""
 
     def fill_date_of_birth(self, month, year, day):
@@ -54,7 +60,7 @@ class RegistrationPage:
 
     """Проверка заполненной формы"""
 
-    def should_registered_user_with(self, user: UserData):
+    def should_registered_user_practice_form(self, user: UserData):
         self.registered_user_data.should(
             have.exact_texts(
                 user.full_name,
